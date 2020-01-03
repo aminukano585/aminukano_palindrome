@@ -1,16 +1,28 @@
 require "aminukano_palindrome/version"
 
-class String
+module AminukanoPalindrome
   
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.empty?
+      false
+    else
+      processed_content == processed_content.reverse
+    end
   end
 
   private
 
     # Returns content for palindrome testing.
     def processed_content
-      self.scan(/[a-z]/i).join.downcase
+      self.to_s.scan(/[a-z0-9]/i).join.downcase
     end
+end
+
+class String
+  include AminukanoPalindrome
+end
+
+class Integer
+  include AminukanoPalindrome
 end
