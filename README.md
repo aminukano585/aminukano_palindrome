@@ -1,5 +1,7 @@
 # AminukanoPalindrome
 
+[![Build Status](https://travis-ci.com/aminukano585/aminukano_palindrome.svg?branch=master)](https://travis-ci.com/aminukano585/aminukano_palindrome)
+
 A simple palindrome detector
 
 ## Installation
